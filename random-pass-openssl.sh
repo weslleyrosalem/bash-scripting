@@ -4,7 +4,7 @@
 
 random_pass() {
 CHECKSSL=$(rpm -qa | grep openssl | cut -d - -f 1)
-if [ "$CHECKSSL" = "openssl" ]
+if [ "$CHECKSSL" = "openssl" ] || exit
 then
 	openssl rand -base64 12
 fi
